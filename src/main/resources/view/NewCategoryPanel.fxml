@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lodz.p.zzpwj.userinterface.controller.NewCategoryPanelController">
+    <children>
+        <Label layoutX="42.0" layoutY="105.0" prefHeight="35.0" prefWidth="177.0" text="Nazwa kategorii">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="categoryNameTextField" layoutX="236.0" layoutY="97.0" prefHeight="51.0" prefWidth="311.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </TextField>
+        <Button fx:id="approveButton" layoutX="340.0" layoutY="184.0" mnemonicParsing="false" text="Zatwierdź">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="184.0" layoutY="184.0" mnemonicParsing="false" text="Anuluj">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Label fx:id="infoLabel" layoutX="42.0" layoutY="28.0" prefHeight="60.0" prefWidth="583.0" textAlignment="CENTER" textFill="#eb1f04">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

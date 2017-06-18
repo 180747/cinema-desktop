@@ -9,8 +9,8 @@
         <module name="cinemaDesktop" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cinemaDesktop" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="cinemaDesktop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

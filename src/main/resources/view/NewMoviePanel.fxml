@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="623.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lodz.p.zzpwj.userinterface.controller.NewMoviePanelController">
+    <children>
+        <Pane prefHeight="684.0" prefWidth="849.0">
+            <children>
+                <GridPane layoutX="78.0" layoutY="83.0" prefHeight="441.0" prefWidth="546.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="225.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="321.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="104.0" minHeight="0.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="titleTextField" maxWidth="-Infinity" prefHeight="51.0" prefWidth="272.0" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="durationTextField" maxWidth="-Infinity" prefHeight="51.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </TextField>
+                        <Label text="Tytuł">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="217.0" text="Czas trwania (min.)" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="217.0" text="Kategoria" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="categoryComboBox" prefHeight="26.0" prefWidth="169.0" promptText="wybierz z listy" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label prefHeight="35.0" prefWidth="217.0" text="Opis filmu" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="descriptionTextArea" prefHeight="171.0" prefWidth="321.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    </children>
+                </GridPane>
+                <Button fx:id="approveButton" layoutX="450.0" layoutY="560.0" mnemonicParsing="false" text="Zatwierdź">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cancelButton" layoutX="311.0" layoutY="560.0" mnemonicParsing="false" text="Anuluj">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

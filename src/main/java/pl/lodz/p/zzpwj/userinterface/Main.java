@@ -11,9 +11,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("loginPanel.fxml"));
+            //FXMLLoader loader = new FXMLLoader(getClass().getResource("/LoginPanel.fxml"));
+            //loader.setLocation(Main.class.getClassLoader().getResource("/pl/lodz/p/zzpwj/userinterface/LoginPanel.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/view/LoginPanel-Marcin-Komputer.fxml"));
+            AnchorPane root = (AnchorPane) loader.load();
             Scene scene = new Scene(root,400,400);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+           scene.getStylesheets().add(getClass().getResource("/view/application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.setTitle("Cinema Manager - Logowanie");
