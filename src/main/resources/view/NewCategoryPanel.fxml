@@ -9,7 +9,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lodz.p.zzpwj.userinterface.controller.NewCategoryPanelController">
     <children>
-        <Label layoutX="42.0" layoutY="105.0" prefHeight="35.0" prefWidth="177.0" text="Nazwa kategorii">
+        <Label layoutX="42.0" layoutY="105.0" prefHeight="35.0" prefWidth="177.0" text="Category name">
             <font>
                 <Font size="24.0" />
             </font>
@@ -19,12 +19,12 @@
                 <Font size="24.0" />
             </font>
         </TextField>
-        <Button fx:id="approveButton" layoutX="340.0" layoutY="184.0" mnemonicParsing="false" text="Zatwierdź">
+        <Button fx:id="approveButton" layoutX="340.0" layoutY="184.0" mnemonicParsing="false" text="Save">
             <font>
                 <Font size="24.0" />
             </font>
         </Button>
-        <Button fx:id="cancelButton" layoutX="184.0" layoutY="184.0" mnemonicParsing="false" text="Anuluj">
+        <Button fx:id="cancelButton" layoutX="184.0" layoutY="184.0" mnemonicParsing="false" text="Cancel">
             <font>
                 <Font size="24.0" />
             </font>

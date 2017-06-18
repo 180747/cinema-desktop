@@ -9,45 +9,24 @@
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane prefHeight="789.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lodz.p.zzpwj.userinterface.controller.MainPanelController">
-    <top>
-        <MenuBar BorderPane.alignment="CENTER">
-            <menus>
-                <Menu mnemonicParsing="false" text="File">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                    </items>
-                </Menu>
-            </menus>
-        </MenuBar>
-    </top>
     <center>
         <Pane prefHeight="864.0" prefWidth="793.0" BorderPane.alignment="CENTER">
             <children>
                 <Separator layoutX="-2.0" orientation="VERTICAL" prefHeight="766.0" prefWidth="0.0" />
                 <TableView fx:id="movieListTable" layoutX="10.0" layoutY="32.0" prefHeight="712.0" prefWidth="838.0" tableMenuButtonVisible="true" visible="false">
                     <columns>
-                        <TableColumn fx:id="movieTitleColumn" prefWidth="160.0" text="Tytuł filmu" />
-                        <TableColumn fx:id="movieCategoryColumn" minWidth="0.0" prefWidth="136.0" text="Gatunek" />
-                        <TableColumn fx:id="movieDurationColumn" prefWidth="193.0" text="Czas trwania (min.)" />
-                        <TableColumn fx:id="movieDescriptionColumn" prefWidth="348.0" text="Opis" />
+                        <TableColumn fx:id="movieTitleColumn" prefWidth="160.0" text="Movie title" />
+                        <TableColumn fx:id="movieCategoryColumn" minWidth="0.0" prefWidth="136.0" text="Category" />
+                        <TableColumn fx:id="movieDurationColumn" prefWidth="193.0" text="Duration (min.)" />
+                        <TableColumn fx:id="movieDescriptionColumn" prefWidth="348.0" text="Description" />
                     </columns>
                 </TableView>
                 <TableView fx:id="categoryListTable" layoutX="260.0" layoutY="83.0" prefHeight="626.0" prefWidth="276.0" visible="false">
                     <columns>
-                        <TableColumn fx:id="categoryNameColumn" prefWidth="275.0" text="Nazwa kategorii" />
+                        <TableColumn fx:id="categoryNameColumn" prefWidth="275.0" text="Category name" />
                     </columns>
                 </TableView>
-                <Label fx:id="ticketPriceInfoLabel" layoutX="63.0" layoutY="65.0" prefHeight="79.0" prefWidth="316.0" text="Aktualna cena biletów wynosi: " visible="false">
+                <Label fx:id="ticketPriceInfoLabel" layoutX="63.0" layoutY="65.0" prefHeight="79.0" prefWidth="316.0" text="Current ticket price: " visible="false">
                     <font>
                         <Font size="22.0" />
                     </font>
@@ -67,13 +46,13 @@
                         <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label fx:id="setNewTicketPriceLabel" prefHeight="39.0" prefWidth="262.0" text="Ustal nową cenę biletów: ">
+                        <Label fx:id="setNewTicketPriceLabel" prefHeight="39.0" prefWidth="262.0" text="Type in new ticket price: ">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Label>
                         <TextField fx:id="setNewTicketPriceTextField" prefHeight="25.0" prefWidth="44.0" GridPane.columnIndex="1" />
-                        <Button fx:id="setNewTicketPriceButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="197.0" text="Zapisz" GridPane.rowIndex="1" />
+                        <Button fx:id="setNewTicketPriceButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="197.0" text="Save" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
             </children></Pane>
@@ -81,18 +60,18 @@
     <left>
         <VBox prefHeight="864.0" prefWidth="197.0" BorderPane.alignment="CENTER">
             <children>
-                <TitledPane animated="false" prefHeight="135.0" prefWidth="202.0" text="Filmy">
+                <TitledPane animated="false" prefHeight="135.0" prefWidth="202.0" text="Movies">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="111.0" prefWidth="203.0">
                                     <children>
-                                        <Button fx:id="movieListButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Lista filmów">
+                                        <Button fx:id="movieListButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Movie list">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                                             </VBox.margin>
                                         </Button>
-                                        <Button fx:id="addMovieButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Dodaj film">
+                                        <Button fx:id="addMovieButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Add movie">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="20.0" />
                                             </VBox.margin>
@@ -103,18 +82,18 @@
                         </AnchorPane>
                     </content>
                 </TitledPane>
-                <TitledPane animated="false" prefHeight="138.0" prefWidth="202.0" text="Kategorie">
+                <TitledPane animated="false" prefHeight="138.0" prefWidth="202.0" text="Categories">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <VBox layoutX="-1.0" prefHeight="112.0" prefWidth="204.0">
                                     <children>
-                                        <Button fx:id="categoryListButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Lista kategorii">
+                                        <Button fx:id="categoryListButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Category list">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                                             </VBox.margin>
                                         </Button>
-                                        <Button fx:id="addCategoryButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Dodaj kategorię">
+                                        <Button fx:id="addCategoryButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Add category">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="20.0" />
                                             </VBox.margin>
@@ -125,18 +104,18 @@
                         </AnchorPane>
                     </content>
                 </TitledPane>
-                <TitledPane animated="false" prefHeight="139.0" prefWidth="202.0" text="Bilety">
+                <TitledPane animated="false" prefHeight="139.0" prefWidth="202.0" text="Tickets">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="125.0" prefWidth="201.0">
                                     <children>
-                                        <Button fx:id="ticketPriceButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Cena biletów">
+                                        <Button fx:id="ticketPriceButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Ticket price">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                                             </VBox.margin>
                                         </Button>
-                                        <Button fx:id="setTicketPriceButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="Ustal cenę biletów">
+                                        <Button fx:id="setTicketPriceButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="216.0" text="New ticket price">
                                             <VBox.margin>
                                                 <Insets left="10.0" right="20.0" />
                                             </VBox.margin>

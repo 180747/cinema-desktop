@@ -234,9 +234,9 @@ public class MainPanelController implements Initializable {
                     else
                         throw new PriceValidationException();
                 } catch (NumberFormatException | PriceValidationException e) {
-                    PopupMessage.showErrorPopupMessage("Błędny format ceny biletu.\nCenu biletu musi być liczbą z zakresu 1-99, a część ułamkowa musi być oddzielona kropką!", setNewTicketPriceButton.getScene().getWindow());
+                    PopupMessage.showErrorPopupMessage("Wrong format of ticket price.\nTicket price should be in range 1-99 and fractional part should be separate by a dot!", setNewTicketPriceButton.getScene().getWindow());
                 } catch (PersistenceException e) {
-                    PopupMessage.showErrorPopupMessage("Błąd połączenia z bazą danych", setNewTicketPriceButton.getScene().getWindow());
+                    PopupMessage.showErrorPopupMessage("Error during connection to the database!", setNewTicketPriceButton.getScene().getWindow());
                 } finally {
                     priceFacade.closeEntityManagerFactory();
                 }
@@ -247,7 +247,7 @@ public class MainPanelController implements Initializable {
 
             @Override
             public void handle(ActionEvent event) {
-                showNewPanel("/view/NewMoviePanel.fxml", "Cinema Manager - Dodawanie filmu");
+                showNewPanel("/view/NewMoviePanel.fxml", "Cinema Manager - Add movie");
             }
         });
 
@@ -255,7 +255,7 @@ public class MainPanelController implements Initializable {
 
             @Override
             public void handle(ActionEvent event) {
-                showNewPanel("/view/NewCategoryPanel.fxml", "Cinema Manager - Dodawanie kategorii");
+                showNewPanel("/view/NewCategoryPanel.fxml", "Cinema Manager - Add category");
 
             }
         });

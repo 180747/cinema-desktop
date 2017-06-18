@@ -15,7 +15,7 @@ public class ErrorPanelController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        errorTextArea.setText("Wystąpił błąd. Skontaktuj się z dostawcą aplikacji.");
+        errorTextArea.setText("Error occurred. Contact the provider of this application.");
         errorTextArea.setEditable(false);
 
     }

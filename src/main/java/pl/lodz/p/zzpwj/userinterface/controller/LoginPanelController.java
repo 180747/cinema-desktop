@@ -62,7 +62,7 @@ public class LoginPanelController implements Initializable {
                     showMainPanel();
                 } else {
                     loginInfo.setTextFill(Color.valueOf("red"));
-                    loginInfo.setText("Błędna para login/hasło!");
+                    loginInfo.setText("Wrong pair login/password!");
                 }
 
             }

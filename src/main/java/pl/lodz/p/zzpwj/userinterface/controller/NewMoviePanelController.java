@@ -103,7 +103,6 @@ public class NewMoviePanelController implements Initializable {
                         && checkDuration(durationTextField.getText())
                         && checkTitle(titleTextField.getText())) {
                     try {
-                        category = new Category();
                         category = categoryFacade.findByName(categoryComboBox
                                 .getValue());
                         entity.setTitle(titleTextField.getText());

@@ -72,18 +72,18 @@ public class NewCategoryPanelController implements Initializable {
                     try {
                         categoryFacade.create(entity);
                         categoryNameTextField.clear();
-                        PopupMessage.showInfoPopupMessage("Nowa kategoria została dodana do bazy.", (((Node) event.getSource()).getScene()).getWindow());
+                        PopupMessage.showInfoPopupMessage("New category added to the database.", (((Node) event.getSource()).getScene()).getWindow());
                         (((Node) event.getSource()).getScene()).getWindow().hide();
 //						infoLabel.setTextFill(Color.valueOf("green"));
 //						infoLabel.setText("Nowa kategoria została dodana do bazy.");
                     } catch (PersistenceException e) {
-                        PopupMessage.showErrorPopupMessage("Wystąpił błąd podczas próby zapisu danych do bazy. Skontaktuj się z producentem aplikacji", approveButton.getScene().getWindow());
+                        PopupMessage.showErrorPopupMessage("Error occurred during saving data to the database. Contact with the provider of this application.", approveButton.getScene().getWindow());
                     } finally {
                         categoryFacade.closeEntityManagerFactory();
                     }
                 } else {
                     infoLabel.setTextFill(Color.valueOf("red"));
-                    infoLabel.setText("Nazwa kategorii nie może być pusta oraz nie może się powtarzać!");
+                    infoLabel.setText("Category name cannot be empty and cannot be repeated!");
                 }
 
 
@@ -115,7 +115,7 @@ public class NewCategoryPanelController implements Initializable {
         try {
             existingCategoryList = categoryFacade.findAll();
         } catch (Exception e) {
-            PopupMessage.showErrorPopupMessage("Wystąpił błąd podczas połączenia z bazą danych", approveButton.getScene().getWindow());
+            PopupMessage.showErrorPopupMessage("Error occurred during the connection to the database.", approveButton.getScene().getWindow());
         }
     }
 }

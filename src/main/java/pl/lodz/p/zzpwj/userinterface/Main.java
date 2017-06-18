@@ -20,7 +20,7 @@ public class Main extends Application {
            scene.getStylesheets().add(getClass().getResource("/view/application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
-            primaryStage.setTitle("Cinema Manager - Logowanie");
+            primaryStage.setTitle("Cinema Manager - Authentication");
             primaryStage.show();
         } catch(Exception e) {
             e.printStackTrace();
