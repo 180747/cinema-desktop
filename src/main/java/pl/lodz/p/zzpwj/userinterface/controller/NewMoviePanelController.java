@@ -145,7 +145,7 @@ public class NewMoviePanelController implements Initializable {
      *         zostanie spełniony.
      */
     public boolean checkDuration(String typedDuration) {
-        if (!typedDuration.isEmpty()) {
+        if (typedDuration != null && !typedDuration.isEmpty()) {
             try {
                 int duration = new Integer(typedDuration);
                 if (duration > 5 && duration < 300)
@@ -165,7 +165,7 @@ public class NewMoviePanelController implements Initializable {
      * @return true jeżeli tytuł został wpisany, false w przeciwnym przypadku.
      */
     public boolean checkTitle(String title) {
-        if (title.isEmpty())
+        if (title == null || title.isEmpty())
             return false;
         else
             return true;
@@ -180,7 +180,7 @@ public class NewMoviePanelController implements Initializable {
      *         przypadku.
      */
     public boolean checkCategory(String category) {
-        if (category.isEmpty())
+        if (category == null || category.isEmpty())
             return false;
         else
             return true;

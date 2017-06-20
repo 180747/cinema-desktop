@@ -49,7 +49,7 @@ public class NewCategoryPanelControllerTest {
     @Test
     public void shouldFailCategoryNameTestCategoryNameEmpty() {
         helpCategory.setName("");
-        when(mockedCategoryFacade.findAll()).thenReturn(categoryList) ;
+        when(mockedCategoryFacade.findAll()).thenReturn(categoryList);
         boolean result = sut.validateCategory(helpCategory.getName());
         assertThat(result).isFalse();
     }
@@ -63,8 +63,8 @@ public class NewCategoryPanelControllerTest {
 
     @Test
     public void shouldFailCategoryTestNameCategoryNameRepeated() {
-        testCategory.setName("Komedia");
-        boolean result = sut.validateCategory(testCategory.getName());
+        when(mockedCategoryFacade.findAll()).thenReturn(categoryList);
+        boolean result = sut.validateCategory("Komedia");
         assertThat(result).isFalse();
     }
 }
